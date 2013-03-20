@@ -1,13 +1,30 @@
 package br.com.renato.ControleDeTurmas;
 
+import br.com.renato.utilitarios.io.Console;
+
 public class App {
 
     public static void main(String[] args) {
-   //     Aluno a1 = new Aluno();
-       // Turma t1 = new Turma(1, "Sistema de Informação 3 Semestre");
-        Instituicao i1 = new Instituicao();
-    //    i1.matriculas(a1);
-     //   System.out.println("Nome: " + a1.getNome() + ". Nota: " + a1.calcularMedia());
-        //System.out.println("Turma: " + t1.getDescricao() + ". Quantidade de Alunos: " + t1.quantidadeAlunos());
+        Instituicao instituicao = new Instituicao();        
+        String ra;
+        String nome;
+        String codigo;
+        String descricao;
+        
+        Console.escrever("Digite o RA do aluno :");
+        ra = Console.ler();
+
+        Console.escrever("Digite o nome do aluno :");
+        nome = Console.ler();
+
+        Console.escrever("Digite o Código da Turma  do aluno :");
+        codigo = Console.ler();
+
+        Console.escrever("Digite o nome da Turma do aluno :");
+        descricao = Console.ler();
+        
+        Console.escreverln(ra);
+        
+
     }
 }

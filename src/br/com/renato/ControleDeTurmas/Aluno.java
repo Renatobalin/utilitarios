@@ -1,23 +1,18 @@
 package br.com.renato.ControleDeTurmas;
 
 public class Aluno {
-    //Variaveis de atributos do alunos
-
     private int ra;
     private String nome;
-    //Classe Turma é uma variaveis com seus repectivos atributos
     private Turma turma;
     private float notaG1;
     private float notaG2;
 
-    //construtor de aluno
     public Aluno(int ra, String nome) {
         this.ra = ra;
         this.nome = nome;
-  
+
     }
 
-    //Geraçao de Get e Setter para cada Atibutos
     public int getRa() {
         return ra;
     }
@@ -57,10 +52,11 @@ public class Aluno {
     public void setNotaG2(float notaG2) {
         this.notaG2 = notaG2;
     }
-
+    
+   
     //Operacao Calucular Média
     public float calcularMedia() {
-        float media = (notaG1 + notaG2 * 2)/2;
+        float media = (notaG1 + notaG2 * 2) / 2;
         return media;
     }
 
