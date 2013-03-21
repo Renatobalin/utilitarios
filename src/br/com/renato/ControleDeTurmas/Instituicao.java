@@ -1,6 +1,7 @@
 package br.com.renato.ControleDeTurmas;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Instituicao {
@@ -8,7 +9,7 @@ public class Instituicao {
     private List<Turma> turmas = new ArrayList<Turma>();
     
     public List<Turma> getTurmas() {
-        return turmas;
+        return Collections.unmodifiableList(turmas);
     }
     
     public void setTurmas(List<Turma> turmas) {
@@ -16,6 +17,6 @@ public class Instituicao {
     }
     
     public void addTurma(Turma turma) {
-        turmas.add(turma);
+        boolean add = turmas.add(turma);
     }
 }

@@ -1,18 +1,23 @@
-package br.com.renato.ControleDeTurmas;
+package br.com.reverson.ControleDeTurmas;
 
 public class Aluno {
+    //Variaveis de atributos do alunos
+
     private int ra;
     private String nome;
+    //Classe Turma é uma variaveis com seus repectivos atributos
     private Turma turma;
     private float notaG1;
     private float notaG2;
 
+    //construtor de aluno
     public Aluno(int ra, String nome) {
         this.ra = ra;
         this.nome = nome;
-
+  
     }
 
+    //Geraçao de Get e Setter para cada Atibutos
     public int getRa() {
         return ra;
     }
@@ -37,7 +42,7 @@ public class Aluno {
         this.turma = turma;
     }
 
-    public float getNotaG1(float notaG1) {
+    public float getNotaG1() {
         return notaG1;
     }
 
@@ -45,17 +50,17 @@ public class Aluno {
         this.notaG1 = notaG1;
     }
 
-    public float getNotaG2(float notaG2) {
+    public float getNotaG2() {
         return notaG2;
     }
 
     public void setNotaG2(float notaG2) {
         this.notaG2 = notaG2;
     }
-    
-   
+
+    //Operacao Calucular Média
     public float calcularMedia() {
-        float media = (notaG1 + notaG2 * 2) / 2;
+        float media = (notaG1 + notaG2 * 2)/2;
         return media;
     }
 
@@ -74,7 +79,6 @@ public class Aluno {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        
         final Aluno other = (Aluno) obj;
         if (this.ra != other.ra) {
             return false;
