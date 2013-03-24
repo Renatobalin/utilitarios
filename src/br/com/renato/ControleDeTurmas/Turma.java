@@ -8,10 +8,10 @@ public class Turma {
     private String descricao;
     private ArrayList<Aluno> alunos;
 
-    public Turma(int codigo, String descricao) {
+    public Turma(int codigo, String descricao, ArrayList<Aluno> alunos) {
         this.codigo = codigo;
         this.descricao = descricao;
-        alunos = new ArrayList<Aluno>();
+        this.alunos = alunos;
     }
 
     public int getCodigo() {

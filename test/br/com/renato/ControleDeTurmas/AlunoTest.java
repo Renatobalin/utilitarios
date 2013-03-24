@@ -3,7 +3,6 @@ package br.com.renato.ControleDeTurmas;
 import org.junit.Before;
 import org.junit.Test;
 
-//Criar Testes para Todos os metodos do Controle de turmas
 public class AlunoTest {
 
     private Aluno al;
@@ -11,13 +10,13 @@ public class AlunoTest {
     @Before
     public void init() {
         setAl(new Aluno(1, ""));
-        getAl().setNotaG1(1);
+        getAl().setNotaG1(6);
         getAl().setNotaG2(10);
     }
 
     @Test
     public void calculaMedia() {
-        getAl().setNotaG1(1);
+        getAl().setNotaG1(6);
         getAl().setNotaG2(10);
         assertEquals(1, getAl().getRa());
 
@@ -25,7 +24,7 @@ public class AlunoTest {
 
     @Test
     public void nomeNull() {
-        getAl().setNotaG1(1);
+        getAl().setNotaG1(6);
         getAl().setNotaG2(10);
 
         assertEquals(1, getAl().getRa());

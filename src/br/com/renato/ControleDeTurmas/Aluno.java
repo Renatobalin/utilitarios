@@ -37,7 +37,7 @@ public class Aluno {
         this.turma = turma;
     }
 
-    public float getNotaG1(float notaG1) {
+    public float getNotaG1() {
         return notaG1;
     }
 
@@ -45,15 +45,14 @@ public class Aluno {
         this.notaG1 = notaG1;
     }
 
-    public float getNotaG2(float notaG2) {
+    public float getNotaG2() {
         return notaG2;
     }
 
     public void setNotaG2(float notaG2) {
         this.notaG2 = notaG2;
     }
-    
-   
+
     public float calcularMedia() {
         float media = (notaG1 + notaG2 * 2) / 2;
         return media;
@@ -67,6 +66,7 @@ public class Aluno {
     }
 
     @Override
+    @SuppressWarnings("AccessingNonPublicFieldOfAnotherObject")
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
@@ -74,7 +74,7 @@ public class Aluno {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        
+
         final Aluno other = (Aluno) obj;
         if (this.ra != other.ra) {
             return false;
